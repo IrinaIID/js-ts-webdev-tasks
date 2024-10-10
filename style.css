@@ -1,0 +1,46 @@
+.main {
+  max-width: 1170px;
+  margin: 100px auto;
+}
+
+.first-block-page {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.color-dark-blue {
+  color: #1E0E62;
+}
+
+.bg-color-white {
+  background-color: #fff;
+}
+
+.bg-color-light-grey {
+  background-color: #EBEAED;
+}
+
+.color-grey {
+  color: #9B9BAA;
+}
+
+.color-white {
+  color: #fff;
+}
+
+.bg-color-light-mint {
+  background-color: #25DAC5;
+}
+
+.border-light-grey {
+  border: 1px solid #EBEAED;
+}
+
+.bg-accent-blue {
+  background-color: #482BE7;
+}
+
+.bg-img-sea-boat {
+  background: url('./assets/bg-sea-boat.png');
+}
