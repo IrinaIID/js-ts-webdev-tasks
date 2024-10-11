@@ -55,22 +55,26 @@ function initPage() {
   const firstBlocPage = createElementAppendParent('div', ['first-block-page'], mainContainer);
   const mainTitle = createElementAppendParent('h1', ['main-title'], firstBlocPage);
   mainTitle.textContent = 'Last works';
-  const mainBtn = createElementAppendParent('button', ['main-btn'], firstBlocPage);
-  mainBtn.textContent = 'Explore Showcase';
+  createBtn(['main-btn'], firstBlocPage, 'Explore Showcase');
+  
+  const cardsContainer = createElementAppendParent('div', ['cards-container'], mainContainer);
 
-  createCards(mainContainer);
+  CARDS_DATA.forEach(cardInfo => {
+    createCard(cardInfo, cardsContainer);
+  })
 }
 
-function createCards(parentElement) {
-  const cardsContainer = createElementAppendParent('div', ['cards-container'], parentElement);
-  CARDS_DATA.forEach(cardInfo => {
-    console.log(cardInfo)
-    const card = createElementAppendParent('div', ['card', ...cardInfo.cardStyle], cardsContainer);
+function createCard(cardInfo, parentElement) {
+    const card = createElementAppendParent('div', ['card', ...cardInfo.cardStyle], parentElement);
     const cardTitle = createElementAppendParent('h3', ['card-title', ...cardInfo.titleStyle], card);
     cardTitle.textContent = cardInfo.title;
     const cardDEscription = createElementAppendParent('div', ['card-description', ...cardInfo.descriptionStyle], card);
     cardDEscription.textContent = cardInfo.description;
-    const cardBtn = createElementAppendParent('button', ['card-btn', ...cardInfo.btnStyle], card);
-    cardBtn.textContent = cardInfo.textBtn;
-  })
+    const stylesBtn = ['card-btn', ...cardInfo.btnStyle];
+    createBtn(stylesBtn, card, cardInfo.textBtn);
+}
+
+function createBtn(stylesBtn, parentElement, textBtn) {
+  const cardBtn = createElementAppendParent('button', stylesBtn, parentElement);
+  cardBtn.textContent = textBtn;
 }
