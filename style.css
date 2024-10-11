@@ -1,3 +1,11 @@
+* {
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: "DM Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
 .main {
   max-width: 1170px;
   margin: 100px auto;
@@ -7,6 +15,63 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
+  margin-bottom: 43px;
+}
+
+.main-title {
+  font-size: 42px;
+  color: #1E0E62;
+}
+
+.main-btn {
+  font-size: 18px;
+  color: #1E0E62;
+  background: none;
+  border: 2px solid #EBEAED;
+  border-radius: 100px;
+  padding: 12px 30px;
+}
+
+.main-btn:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.card {
+  max-width: 570px;
+  height: 350px;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  border-radius: 10px;
+  padding: 50px 70px;
+  margin-bottom: 30px;
+}
+
+.card-title {
+  font-size: 22px;
+  margin-bottom: 16px;
+}
+
+.card-description {
+  line-height: 26px;
+}
+
+.card-btn {
+  width: 105px;
+  border: none;
+  border-radius: 100px;
+  padding: 9px 25px;
+  cursor: pointer;
+}
+
+.card-btn:hover {
+  transform: scale(1.1);
 }
 
 .color-dark-blue {
@@ -18,7 +83,7 @@
 }
 
 .bg-color-light-grey {
-  background-color: #EBEAED;
+  background: #EBEAED;
 }
 
 .color-grey {
@@ -43,4 +108,5 @@
 
 .bg-img-sea-boat {
   background: url('./assets/bg-sea-boat.png');
+  background-size: cover;
 }
